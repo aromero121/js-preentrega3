@@ -87,15 +87,17 @@ function desplegarMenuOpciones() {
 
 function desplegarProductosPorPrecio(productos){
 
+    let productosPorPrecio = productos.slice();
+
     // Ordena el array de productos por precio de menor a mayor
-    productos.sort(function(a, b) {
+    productosPorPrecio.sort(function(a, b) {
         return a.precioProducto - b.precioProducto;
     });
 
     let resultado = "Productos ordenados por precio (menor a mayor):\n\n";
     resultado += "==============================================\n\n";
 
-    productos.forEach(producto => {
+    productosPorPrecio.forEach(producto => {
         resultado += `- ${producto.idProducto} - ${producto.nombreProducto}: $ ${producto.precioProducto}\n\n`;
     });
     

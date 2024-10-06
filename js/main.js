@@ -8,7 +8,6 @@ class Producto {
         this.nombreProducto = nombreProducto;
         this.precioProducto = precioProducto;
         this.codigoBarras = codigoBarras;
-        this.stock = stock;
     }
 
     // Método para obtener el precio del producto
@@ -26,11 +25,11 @@ class Producto {
 let productos = [];
 
 // Instancias de Producto
-let producto_1 = new Producto(1, "Fideos Orecchiette Pugliesi 500 gr", 301, "12356789",10);
-let producto_2 = new Producto(2, "Pizza SANOSINHARINA 90 gr", 145, "987654321",15);
-let producto_3 = new Producto(3, "Ñoquis de Papa SPEZIA 750 gr", 375, "77895123",8);
-let producto_4 = new Producto(4, "Vino DON PASCUAL Tinto 750 ml", 580, "900011123",4);
-let producto_5 = new Producto(5, "Whisky JAMESON 1 L", 2700, "567890123",12);
+let producto_1 = new Producto(1, "Fideos Orecchiette Pugliesi 500 gr", 301, "12356789");
+let producto_2 = new Producto(2, "Pizza SANOSINHARINA 90 gr", 145, "987654321");
+let producto_3 = new Producto(3, "Ñoquis de Papa SPEZIA 750 gr", 375, "77895123");
+let producto_4 = new Producto(4, "Vino DON PASCUAL Tinto 750 ml", 580, "900011123");
+let producto_5 = new Producto(5, "Whisky JAMESON 1 L", 2700, "567890123");
 
 
 // Se agregan todos los productos al array
@@ -118,6 +117,7 @@ function procesarCompra(continuaComprando,totalCompra,cantidadItemsCompra,produc
     
      // Preguntar si desea seguir comprando
      let continuar = prompt("¿Quieres agregar más productos a tu compra? (S/N)").toUpperCase();
+
      if ((continuar !== "S") || (maxItemsCompra == cantidadItemsCompra)) {
          continuaComprando = false;
          // Desplegar resumen de lo comprado
