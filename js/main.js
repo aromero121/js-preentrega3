@@ -1,7 +1,7 @@
 // Valores de configuración
 const maxItemsCompra = 10;
 
-// Clase Producto
+
 class Producto {
     constructor(idProducto, nombreProducto, precioProducto, codigoBarras, stock) {
         this.idProducto = idProducto;
